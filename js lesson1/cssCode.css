@@ -27,7 +27,7 @@
     height: 30px;
     padding: 45px;
 }
-.menu a:hover, #menu a.active{
+.menu a:hover, .menu a.active{
     color: #ffffff;
     border: 1px solid #1e4b82;
     background-color: #1e4b82;

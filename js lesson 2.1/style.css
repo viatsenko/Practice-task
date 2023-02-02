@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+font-family: Arial, helvetica sans-serif;
+    line-height: 1.6;
+}
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 5px;
+    background: #f4f4f4;
+    margin: 5px 0;
+}
+header{
+    background: #1376ea;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+.container{
+    margin: auto;
+    overflow: auto;
+    width: 500px;
+    padding: 3rem;
+}
+#my-form{
+    padding: 2rem;
+
+}
+#my-form label{
+    display: block;
+}
+#my-form input{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.userInput{
+    width: 100%;
+    background: #1376ea;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: white;
+}
+#but .button{
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 40px 0;
+    color: #1376ea;
+    border: 1px solid #1376ea;
+    background-color: white;
+    font-size: 15px;
+    transition: background-color 0.2s ease-in;
+
+}
+#but .button:hover, #but .button:active{
+    color: white;
+    border: 1px solid #1376ea;
+    background-color: #1376ea;
+    transition: background-color 0.2s ease-in;
+}
+.error {
+    color: red;
+
+}
+.valid{
+    color: green;
+}
+.bg-red-error{
+    color: rgb(255,218,218);
+    padding: 5px;
+    margin: 5px;
+}
+.msg{
+    margin: -10px auto 10px auto;
+    font-size: 12px;
+    font-style: italic;
+}
