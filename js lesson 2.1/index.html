@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User input</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<section class="container">
+    <form id="my-form">
+        <h1 class="userInput">User input</h1>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required minlength="2" maxlength="10">
+            <div class="msg name"></div>
+        </div>
+        <div>
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" required maxlength="10">
+            <div class="msg surname"></div>
+        </div>
+        <div>
+            <label for="address">Address:</label>
+            <input type="text" id="address" required maxlength="70">
+            <div class="msg address"></div>
+        </div>
+        <div>
+            <label for="phone_number">Phone number:</label>
+            <input type="text" id="phone_number" required minlength="5" maxlength="11">
+            <div class="msg phone_number"></div>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email"  required minlength="8" maxlength="40">
+            <div class="msg email"></div>
+        </div>
+        <div id="but">
+            <input class="button" type="submit" value="Submit">
+        </div>
+    </form>
+</section>
+
+
+
+
+<script src="app.js"></script>
+</body>
+</html>

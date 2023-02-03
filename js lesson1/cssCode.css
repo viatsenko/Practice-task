@@ -1,0 +1,92 @@
+.menu{
+    /*margin-right: auto;*/
+    /*margin-top: 100px;*/
+    margin-top: 130px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    /*margin-left: 70px;*/
+
+
+}
+.menu a{
+    /*margin-right: 20px;*/
+    /*margin-bottom: 20px;*/
+    text-align: center;
+    font: 24px Arial;
+    text-decoration: none;
+    border: 1px solid #477dae;
+    color: #ffffff;
+    background-color: #477dae;
+    border-radius: 10px;
+    display: inline-block;
+    width: 350px;
+    height: 30px;
+    padding: 45px;
+}
+.menu a:hover, .menu a.active{
+    color: #ffffff;
+    border: 1px solid #1e4b82;
+    background-color: #1e4b82;
+    font-weight: bold;
+    /*background-color: unset;*/
+}
+
+#body{
+    background-color: rgba(111, 175, 220, 0.17);
+    background-color: #2b5d9e;
+}
+.introduction1{
+    text-align: center;
+    font-size: 48px;
+    font-family: "Calibri";
+    color: #ffffff;
+}
+.introduction2{
+    text-align: center;
+    line-height: 15px;
+    font-size: 45px;
+    font-family: "Calibri";
+    color: #ffffff;
+}
+.websiteHead{
+    position: fixed;
+    width: 100%;
+    height: 200px;
+    top: 0;
+    left: 0;
+    background-color: rgba(104, 224, 241, 0.16);
+}
+.h1Page1{
+    text-align: center;
+}
+.codeDiv {
+    position: relative;
+    border: 1px dashed #9b8080;
+    width: 500px;
+    height: 37px;
+    
+    /*border-left: thick solid red;*/
+}
+.divChildClass{
+    position: absolute;
+    left: 17px;
+    top: 0px;
+    height: 35px;
+    border: 1px solid red;
+}
+.mainDiv{
+    width: 1400px;
+    /*border: 1px solid red;*/
+    margin: 10px 50px 5px 5px;
+    text-align: justify;
+    font-family: Calibri;
+    font-size: 17px;
+    /*border: 1px solid black;*/
+}
+p{
+    text-indent: 20px;
+}

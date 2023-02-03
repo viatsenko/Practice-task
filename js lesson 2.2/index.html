@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="cssCode.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" >
+    <title>My second Page</title>
+</head>
+<body>
+
+
+<div class="container mt-3 pt-5 col-sm-4">
+    <div>
+        <h2 class="text-white btn-primary p-3">User input</h2>
+    </div>
+
+    <form action="page2.html" target="_blank" class="needs-validation" novalidate>
+        <div class="form-floating mt-4 mb-4">
+            <input type="text" class="form-control"   id="name" placeholder="Enter your name" name="name"
+                   minlength="2" maxlength="10" required>
+            <label for="name" class="form-label">Name</label>
+            <div class="valid-tooltip">valid</div>
+            <div class="invalid-tooltip">Please fill out this field</div>
+        </div>
+        <div class="form-floating mt-3  mb-4">
+            <input type="text" class="form-control" id="surName" placeholder="Enter your Surname" name="surName"
+                   maxlength="10" required>
+            <label for="surName">Surname</label>
+            <div class="valid-tooltip">valid</div>
+            <div class="invalid-tooltip">Please fill out this field</div>
+        </div>
+        <div class="form-floating mt-3 mb-4">
+            <input type="text" class="form-control" id="address" placeholder="Enter your address" name="address"
+                   maxlength="70" required>
+            <label for="address">Address</label>
+            <div class="valid-tooltip">valid</div>
+            <div class="invalid-tooltip">Please fill out this field</div>
+        </div>
+        <div class="form-floating mt-3  mb-4">
+            <input type="text" class="form-control" id="phone_number" placeholder="Enter your phone number"
+                   name="Phone_number" maxlength="11" required>
+            <label for="phone_number">Phone number</label>
+            <div class="valid-tooltip">valid</div>
+            <div class="invalid-tooltip">Please fill out this field</div>
+        </div>
+        <div class="form-floating mt-3  mb-4">
+
+            <input type="email" class="form-control" id="email" placeholder = "Your Email" name="email"
+                   maxlength="40" required>
+            <label for="email">Email</label>
+            <div class="valid-tooltip">valid</div>
+            <div class="invalid-tooltip">Please fill out field. Please, add "@"</div>
+        </div>
+
+        <div class="mt-5 d-grid" >
+            <button type="submit" class="btn btn-outline-primary" id="button">Submit</button>
+        </div>
+
+    </form>
+</div>
+
+
+
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="jsProject.js"></script>
+</body>
+</html>
