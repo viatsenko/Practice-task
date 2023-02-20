@@ -1,0 +1,27 @@
+#nameInput{
+    background-color: rgba(232, 231, 231, 0.62);
+    border: 1px solid #b7b7b7;
+    padding: 5px;
+    border-radius: 5px;
+}
+#officeInput{
+    background-color: rgba(232, 231, 231, 0.62);
+    border: 1px solid #b7b7b7;
+    padding: 5px;
+    border-radius: 5px;
+}
+#positionInput{
+    background-color: rgba(232, 231, 231, 0.62);
+    border: 1px solid #b7b7b7;
+    padding: 5px;
+    border-radius: 5px;
+}
+#salaryInput{
+    background-color: rgba(232, 231, 231, 0.62);
+    border: 1px solid #b7b7b7;
+    padding: 5px;
+    border-radius: 5px;
+}
+#saveCancelDiv{
+    border: none;
+}

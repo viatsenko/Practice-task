@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" >
+    <title>Document-table#3</title>
+</head>
+<body>
+
+<div id="tableDiv">
+    <table id="table">
+        <thead>
+            <tr>
+                <th>
+                    <input type="text" id="nameInput" placeholder="Name" style="width:100%">
+                 </th>
+                 <th>
+                     <input type="text" id="positionInput" placeholder="Position" style="width:100%">
+                 </th>
+                 <th>
+                     <input type="text" id="officePosition" placeholder="Office" style="width:100%">
+                 </th>
+                 <th>
+                     <input type="text" id="salaryInput" placeholder="Salary" style="width:100%">
+                 </th>
+            </tr>
+            <tr>
+                <td id="saveCancelDiv">
+                    <input id="addButton" class="button buttonBlue" type="button" value="Save">
+                    <input id="canselButton" class="button buttonRed" type="button" value="Cancel">
+                </td>
+            </tr>
+            <tr>
+                <td class="classAddEditDelete">
+                    <input id="AddRowButton" type="button" value="Add row">
+                    <input id="EditButton" type="button" value="Edit">
+                    <input id="DeleteButton" type="button" value="Delete">
+                </td>
+            </tr>
+             <tr id="trTable">
+                <th >Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+</div>
+
+
+
+<script src="app.js"></script>
+</body>
+</html>
