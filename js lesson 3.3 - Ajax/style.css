@@ -1,0 +1,26 @@
+#button {
+    background-color: white;
+    color: #823b3b;
+    border: 2px solid #efcaca;
+    padding: 8px 30px;
+    display: inline-block;
+    margin: 4px 2px 40px 2px;
+    font-size: 18px;
+    border-radius: 8px;
+}
+#button:hover {
+    background-color: #efcaca;
+    color: white;
+}
+#usersContainer{
+    font-family: Calibri;
+    font-size: 15px;
+    cursor: pointer;
+}
+#pElemInf{
+    font-family: Arial;
+    font-size: 16px;
+}
+#demo{
+    margin: 60px 60px;
+}
