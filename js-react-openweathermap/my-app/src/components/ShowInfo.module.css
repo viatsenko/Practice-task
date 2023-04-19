@@ -1,0 +1,12 @@
+.wrapper {
+    height: 100vh;
+    display: flex;
+
+    align-items: self-start;
+    padding-right: 80px;
+    padding-left: 100px;
+    padding-top: 100px;
+    background-color: rgba(239, 198, 22, 0.74);
+    /*background: rgb(131,58,180);*/
+    /*background: linear-gradient(90deg, rgba(131,58,180,0.4443118311777836) 0%, rgba(253,29,29,0.41069838579963236) 58%, rgba(252,176,69,0.45551631297050066) 100%);*/
+}
