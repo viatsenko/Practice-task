@@ -1,0 +1,47 @@
+.ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+}
+.ul li{
+    font-family: "Trebuchet MS", "Lucida Sans";
+    padding: 7px 20px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+    margin-top: 30px;
+    max-width: 550px;
+    border-radius: 10px;
+    border-left: 20px solid #96e5f1;
+    box-shadow: 4px 3px 1px 0px rgba(0,0,0,.1),
+    0px 0px 1px 0 rgba(0,0,0,.1),
+    0px 0px 1px 0 rgba(0,0,0,.1),
+    0px 0px 1px 0 rgba(0,0,0,.1);
+    font-size: 16px;
+    letter-spacing: 2px;
+    transition: 0.4s all linear;
+    color: rgba(87, 88, 97, 0.85);
+}
+.ul li:hover {
+    border-left: 10px solid transparent;
+    cursor: pointer;
+}
+.spanCity{
+    font-weight: bold;
+    color: #f63582;
+}
+.spanCompany{
+    font-weight: bold;
+    color: #1ccfc9;
+}
+.spanName{
+    font-weight: bold;
+    color: #41d847;
+}
+.selectItem{
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.ul>.selectItem{
+    border-left: 20px solid #f63582;
+}

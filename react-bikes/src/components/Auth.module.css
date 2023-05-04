@@ -1,0 +1,93 @@
+.main{
+    margin: auto;
+    padding-top: 20px;
+    max-width: 600px;
+}
+.section{
+    margin-top: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color:#def1e7;
+}
+.form{
+    padding: 30px;
+    width: 500px;
+    text-align: center;
+    margin: auto;
+}
+
+.control{
+    margin-bottom: 20px;
+}
+.control input{
+    display: block;
+    width: 450px;
+    margin: auto;
+    border-radius: 4px;
+    padding: 5px;
+    border: 1px solid #def1e7;
+    outline: none;
+    font-family: inherit;
+    font-size: 16px;
+}
+.control label{
+    display: block;
+    padding-bottom: 5px;
+    font-size: 19px;
+    color: #415f54;
+}
+.btn{
+    position: relative;
+}
+.btn-login{
+    padding: 5px 70px;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 35px;
+    border: none;
+    background-color: white;
+}
+.btn-login:hover{
+    color: #ffffff;
+    background-color: #1ad5c5;
+    font-family: inherit;
+}
+.btn-cancel{
+    padding: 5px 70px;
+    margin-right: 0;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 35px;
+    border: none;
+    background-color: white;
+}
+.btn-cancel:hover{
+    color: #ffffff;
+    background-color: #ff66a1;
+    font-family: inherit;
+}
+.btn-cancel:active{
+    background-color: #f63582;
+}
+.btn-login:active{
+    background-color: #00b9a6;
+}
+input::placeholder {
+    opacity: 0.4;
+    color: #0f141eed;
+    font-size: 14px;
+}
+.error{
+    margin-top: 30px;
+    background-color: #ff629e;
+    padding: 20px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    @import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+    font-family: 'Sigmar', cursive;
+}

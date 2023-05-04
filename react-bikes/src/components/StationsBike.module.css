@@ -1,0 +1,75 @@
+.ul{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   width: 50%;
+   height: 100%;
+   overflow: auto;
+   float: right;
+}
+.ul li{
+ padding: 7px 20px;
+ margin-bottom: 30px;
+ margin-left: 150px;
+ margin-top: 30px;
+ max-width: 550px;
+ border-radius: 10px;
+ border-left: 20px solid #96f1d9;
+ box-shadow: 4px 3px 1px 0px rgba(0,0,0,.1),
+ 0px 0px 1px 0 rgba(0,0,0,.1),
+ 0px 0px 1px 0 rgba(0,0,0,.1),
+ 0px 0px 1px 0 rgba(0,0,0,.1);
+ font-size: 17px;
+ letter-spacing: 2px;
+ transition: 0.4s all linear;
+}
+.ul li:hover {
+ border-left: 10px solid transparent;
+ cursor: pointer;
+}
+.spanName{
+    font-weight: bold;
+    color: #32a1b5;
+}
+.spanFreeBikes{
+    font-weight: bold;
+    color: salmon;
+}
+.divLeft{
+    text-align: left;
+}
+.divRight{
+    text-align: right;
+}
+.fontFreeBikes{
+    font-weight: bold;
+    color: #1ccfc9
+}
+.nameFont{
+    color: #575861;
+}
+.like{
+    color: #f63582;
+    font-weight: bold;
+}
+.dislike{
+    color: rgba(138, 192, 192, 0.38);
+}
+.notFoundStations{
+    font-weight: bold;
+    border: 1px solid rgba(246, 53, 130, 0.42);
+    margin-left:150px;
+    margin-top: 200px;
+    width: 500px;
+    height: 70px;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 17px;
+    font-size: 25px;
+    color: #f63582;
+    box-shadow: 4px 3px 1px 0px rgba(243, 160, 160, 0.54),
+    0px 0px 1px 0 rgba(243, 160, 160, 0.54),
+    0px 0px 1px 0 rgba(243, 160, 160, 0.54),
+    0px 0px 1px 0 rgba(243, 160, 160, 0.54);
+    border-left: 20px solid #f63582;
+}

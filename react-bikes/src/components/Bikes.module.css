@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.bikesContainer{
+    display: flex;
+    height: 85vh;
+}
+.pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
