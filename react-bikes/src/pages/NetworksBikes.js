@@ -15,7 +15,7 @@ const NetworksBikes = () => {
     async function fetchCityBikesStations(id){
             const response = await fetch(`http://api.citybik.es/v2/networks/${id}`);
             const data = await response.json();
-            dispatchActions(bikesActions.cityBikesStations(data.network.stations));
+            dispatchActions(bikesActions.setCityBikesStations(data.network.stations));
     }
     //HTTP Requests Header information
     const [selectedId, setSelectedId] = useState(null);

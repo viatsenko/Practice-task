@@ -5,16 +5,16 @@ const bikesSlice = createSlice({
     name: 'bikes',
     initialState: initialBikes,
     reducers: {
-        cityBikesNetworks(state, action){
+        setCityBikesNetworks(state, action){
             state.networks = action.payload;
         },
-        currentNetworksPage(state, action){
+        setCurrentNetworksPage(state, action){
             state.networkPage = action.payload;
         },
-        cityBikesStations(state, action){
+        setCityBikesStations(state, action){
             state.stations = action.payload;
         },
-        currentStationsPage(state, action){
+        setCurrentStationsPage(state, action){
             state.stationPage = action.payload;
         },
         selectNetwork(state, action){

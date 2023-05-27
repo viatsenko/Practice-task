@@ -25,7 +25,7 @@ const Bikes = () => {
                 throw new Error('Что-то пошло не так...');
             }
             const data = await response.json();
-            dispatchActions(bikesActions.cityBikesNetworks(data.networks));
+            dispatchActions(bikesActions.setCityBikesNetworks(data.networks));
         }
         catch (error){
             setError(error.message);
@@ -45,7 +45,7 @@ const Bikes = () => {
     useEffect(() => {
         const lastNetworksIndex = currentPage * networksPerPage;
         const firstNetworksIndex = lastNetworksIndex - networksPerPage;
-        dispatchActions(bikesActions.currentNetworksPage(bikesNetworks.slice(firstNetworksIndex, lastNetworksIndex))) //текущая страница
+        dispatchActions(bikesActions.setCurrentNetworksPage(bikesNetworks.slice(firstNetworksIndex, lastNetworksIndex))) //текущая страница
     }, [bikesNetworks, currentPage]);
 
     const nextPageNetworks = () => {
@@ -77,7 +77,7 @@ const Bikes = () => {
     useEffect(() => {
         const lastPageStationsIndex = currentPageStations * stationsPerPage;
         const firstPageStationsIndex = lastPageStationsIndex - stationsPerPage;
-        dispatchActions(bikesActions.currentStationsPage(bikesStations.slice(firstPageStationsIndex, lastPageStationsIndex)))
+        dispatchActions(bikesActions.setCurrentStationsPage(bikesStations.slice(firstPageStationsIndex, lastPageStationsIndex)))
     }, [bikesStations, currentPageStations]);
 
     useEffect(() => {
