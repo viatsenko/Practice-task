@@ -21,7 +21,7 @@ const NetworksBikes = () => {
     const [selectedId, setSelectedId] = useState(null);
     async function handleClick(id, name) {
         await fetchCityBikesStations(id);
-        dispatchActions(bikesActions.networkName(name));
+        dispatchActions(bikesActions.selectNetwork({name, id}));
         setSelectedId(id);
     }
 

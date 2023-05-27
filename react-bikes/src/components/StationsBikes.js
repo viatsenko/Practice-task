@@ -9,7 +9,7 @@ const StationsBikes = () => {
     const likesState = useSelector(state => state.favourite);
     const stationPage = useSelector(state => state.bikes.stationPage);
     const networkName = useSelector(state => state.bikes.networkName);
-
+    const networkId = useSelector(state => state.bikes.networkId);
     const dispatchAction = useDispatch();
 
     function likeHandler(id, name){
@@ -17,7 +17,7 @@ const StationsBikes = () => {
             dispatchAction(likesActions.removeLike(id))
         }
         else {
-            dispatchAction(likesActions.addLike({id: id, name: name}));
+            dispatchAction(likesActions.addLike({id, name, networkId}));
         }
     }
 

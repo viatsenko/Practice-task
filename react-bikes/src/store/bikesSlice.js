@@ -1,6 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 
-const initialBikes = {networks: [], networkPage: [], stationPage: [], stations: [], networkName: ''};
+const initialBikes = {networks: [], networkPage: [], stationPage: [], stations: [], networkName: '', networkId: null};
 const bikesSlice = createSlice({
     name: 'bikes',
     initialState: initialBikes,
@@ -17,8 +17,9 @@ const bikesSlice = createSlice({
         currentStationsPage(state, action){
             state.stationPage = action.payload;
         },
-        networkName(state, action){
-            state.networkName = action.payload;
+        selectNetwork(state, action){
+            state.networkName = action.payload.name;
+            state.networkId = action.payload.id;
         }
     }
 });
