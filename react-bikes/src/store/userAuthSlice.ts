@@ -1,7 +1,8 @@
 import {createSlice} from "@reduxjs/toolkit";
+import { AuthState } from './types';
 
-const getInitialState = () => {
-    const isUserLoggedIn =JSON.parse(localStorage.getItem('isUserLogIn'));
+function getInitialState() : AuthState {
+    const isUserLoggedIn = JSON.parse(localStorage.getItem('isUserLogIn') || '');
     return {
         showError: false,
         isUserLoggedIn,

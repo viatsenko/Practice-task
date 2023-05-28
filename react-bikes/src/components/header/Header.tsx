@@ -3,18 +3,20 @@ import {NavLink} from "react-router-dom";
 import styles from './Header.module.css'
 import {useSelector} from "react-redux";
 import {useDispatch} from "react-redux";
-import {userAuthActions} from "../store/userAuthSlice";
+import {userAuthActions} from "../../store/userAuthSlice";
+import {Store} from "../../store/types";
+
 
 const Header = () => {
-    const isUserLoggedIn = useSelector(state => state.auth.isUserLoggedIn);
-    const networkName = useSelector(state => state.bikes.networkName);
-    const stationsLength = useSelector(state => state.bikes.stations);
-    const networkId = useSelector(state => state.bikes.networkId);
+    const isUserLoggedIn = useSelector((state: Store) => state.auth.isUserLoggedIn);
+    const networkName = useSelector((state: Store) => state.bikes.networkName);
+    const stationsLength = useSelector((state: Store) => state.bikes.stations);
+    const networkId = useSelector((state: Store) => state.bikes.networkId);
 
-    const likes = useSelector(state => state.favourite);
+    const likes = useSelector((state: Store) => state.favourite);
     const dispatchAction = useDispatch();
 
-    const handleClickError = (event) => {
+    const handleClickError = (event: React.SyntheticEvent<EventTarget>) => {
         if (!isUserLoggedIn) {
             event.preventDefault();
             dispatchAction(userAuthActions.showError(true));

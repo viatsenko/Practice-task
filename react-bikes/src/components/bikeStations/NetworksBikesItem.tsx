@@ -1,7 +1,13 @@
 import React from 'react';
 import styles from "./NetworksBikes.module.css";
 
-const NetworksBikesItem = (props) => {
+type NetworksBikesItemProps = {
+    city: string;
+    company: string;
+    name: string;
+};
+
+const NetworksBikesItem: React.FC<NetworksBikesItemProps> = (props) => {
 
     return (
         <>

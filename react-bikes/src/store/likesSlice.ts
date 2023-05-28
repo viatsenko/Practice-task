@@ -1,6 +1,7 @@
 import {createSlice} from "@reduxjs/toolkit";
+import {LikesState} from "./types";
 
-const getInitialState = () => {
+function getInitialState(): LikesState{
     const likes = localStorage.getItem('likes')
     const initialsLikes = likes ? JSON.parse(likes) : {};
     return initialsLikes;

@@ -1,7 +1,17 @@
-import React from 'react';
+import React, {MouseEventHandler} from 'react';
 import styles from './PaginationNetworks.module.css';
 
-const PaginationStations = ({
+type PaginationStationProps = {
+    currentPage: number;
+    stationsPerPage: number;
+    totalStations: number;
+    paginate: (pageNumber: number) => void;
+    pervPage: MouseEventHandler<HTMLElement>;
+    nextPage: MouseEventHandler<HTMLElement>;
+    firstPage: MouseEventHandler<HTMLElement>;
+    lastPage: MouseEventHandler<HTMLElement>;
+}
+const PaginationStations: React.FC<PaginationStationProps> = ({
         currentPage,
         stationsPerPage,
         totalStations,
@@ -9,7 +19,7 @@ const PaginationStations = ({
         pervPage,
         nextPage,
         firstPage,
-        lastPage
+        lastPage,
     }) => {
 
     let disabledPrev = false;

@@ -1,7 +1,10 @@
 import React, {Fragment} from 'react';
 import Header from "./Header";
 
-const Layout = (props) => {
+type LayoutProps = {
+    children: React.ReactNode;
+}
+const Layout: React.FC<LayoutProps> = (props) => {
     return (
         <Fragment>
             <Header/>

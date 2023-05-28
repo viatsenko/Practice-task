@@ -1,6 +1,7 @@
 import {createSlice} from "@reduxjs/toolkit";
+import {BikesState} from "./types";
 
-const initialBikes = {networks: [], networkPage: [], stationPage: [], stations: [], networkName: '', networkId: null};
+const initialBikes: BikesState = {networks: [], networkPage: [], stationPage: [], stations: [], networkName: null, networkId: null};
 const bikesSlice = createSlice({
     name: 'bikes',
     initialState: initialBikes,

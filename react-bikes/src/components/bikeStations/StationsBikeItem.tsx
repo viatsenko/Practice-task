@@ -1,7 +1,12 @@
 import React from 'react';
 import styles from './StationsBike.module.css';
 
-const StationsBikeItem = (props) => {
+type StationsBikeItemProps = {
+    name: string;
+    free_bikes: number;
+    favourite: boolean;
+}
+const StationsBikeItem: React.FC<StationsBikeItemProps> = (props) => {
     return (
         <>
             <div className={styles.divLeft}><span className={styles.spanName}>Station name:</span><span className={styles.nameFont}> {props.name}</span></div>

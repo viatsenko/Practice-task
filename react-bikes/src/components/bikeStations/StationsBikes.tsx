@@ -1,18 +1,19 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import styles from './StationsBike.module.css';
-import {likesActions} from "../store/likesSlice";
+import {likesActions} from "../../store/likesSlice";
 import StationsBikeItem from "./StationsBikeItem";
+import {Store} from "../../store/types";
 
 const StationsBikes = () => {
-    const bikesStations = useSelector(state => state.bikes.stations);
-    const likesState = useSelector(state => state.favourite);
-    const stationPage = useSelector(state => state.bikes.stationPage);
-    const networkName = useSelector(state => state.bikes.networkName);
-    const networkId = useSelector(state => state.bikes.networkId);
+    const bikesStations = useSelector((state: Store) => state.bikes.stations);
+    const likesState = useSelector((state: Store) => state.favourite);
+    const stationPage = useSelector((state: Store) => state.bikes.stationPage);
+    const networkName = useSelector((state: Store) => state.bikes.networkName);
+    const networkId = useSelector((state: Store) => state.bikes.networkId);
     const dispatchAction = useDispatch();
 
-    function likeHandler(id, name){
+    function likeHandler(id: string, name: string){
         if (likesState[id] !== undefined){
             dispatchAction(likesActions.removeLike(id))
         }

@@ -3,7 +3,7 @@ import {Redirect, Route, Switch} from "react-router-dom";
 import Bikes from "./pages/Bikes";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
-import Layout from "./components/Layout";
+import Layout from "./components/header/Layout";
 import PrivateRoute from "./pages/privateRoute";
 
 const App = () => {

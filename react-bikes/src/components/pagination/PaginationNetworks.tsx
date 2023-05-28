@@ -1,15 +1,25 @@
-import React from 'react';
+import React, {MouseEventHandler} from 'react';
 import styles from './PaginationNetworks.module.css'
 
-const PaginationNetworks = ({
+type PaginationNetworksProps = {
+    currentPage: number;
+    networksPerPage: number;
+    totalNetworks: number;
+    paginate: (pageNumber: number) => void;
+    pervPage: MouseEventHandler<HTMLElement>;
+    nextPage: MouseEventHandler<HTMLElement>;
+    firstPage: MouseEventHandler<HTMLElement>;
+    lastPage: MouseEventHandler<HTMLElement>;
+}
+const PaginationNetworks: React.FC<PaginationNetworksProps> = ({
+        currentPage,
         networksPerPage,
         totalNetworks,
         paginate,
         pervPage,
         nextPage,
-        currentPage,
         firstPage,
-        lastPage
+        lastPage,
     }) => {
 
     let disabledPrev = false;

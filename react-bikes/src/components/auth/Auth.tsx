@@ -1,16 +1,17 @@
 import React, {useEffect, useState} from 'react';
 import styles from './Auth.module.css';
-import {userAuthActions} from "../store/userAuthSlice";
+import {userAuthActions} from "../../store/userAuthSlice";
 import {useDispatch} from "react-redux";
 import {useSelector} from "react-redux";
 import {useHistory} from "react-router-dom";
+import {Store} from "../../store/types";
 
 const Auth = () => {
     const dispatchAction = useDispatch();
-    const showErrorLogIn = useSelector(state => state.auth.showError);
+    const showErrorLogIn = useSelector((state: Store) => state.auth.showError);
     const history = useHistory();
 
-    const logInHandler = (event) => {
+    const logInHandler = (event: React.SyntheticEvent<EventTarget>) => {
         event.preventDefault();
         if (inputEmail.includes('@') && inputPassword.trim().length > 0){
             dispatchAction(userAuthActions.logIn());
@@ -37,13 +38,13 @@ const cancelHandler = () => {
     const [inputPassword, setInputPassword] = useState('');
     const [isInputPasswordValid, setIsInputPasswordValid] = useState(false);
 
-const inputPasswordHandler = (event) => {
+const inputPasswordHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.value.trim().length > 0){
         setIsInputPasswordValid(true)
     }
     setInputPassword(event.target.value)
 }
-const inputEmailHandler = (event) => {
+const inputEmailHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputEmail(event.target.value)
 }
     return (

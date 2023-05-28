@@ -2,18 +2,19 @@ import React, {useEffect, useState} from 'react';
 import NetworksBikes from "./NetworksBikes";
 import {bikesActions} from '../store/bikesSlice';
 import {useDispatch, useSelector} from "react-redux";
-import StationsBikes from "../components/StationsBikes";
+import StationsBikes from "../components/bikeStations/StationsBikes";
 import PaginationNetworks from "../components/pagination/PaginationNetworks";
-import styles from '../components/Bikes.module.css';
+import styles from '../components/bikeStations/Bikes.module.css';
 import PaginationStations from "../components/pagination/PaginationStations";
+import {Store} from "../store/types";
 
 const Bikes = () => {
     const dispatchActions = useDispatch();
-    const bikesNetworks = useSelector(state => state.bikes.networks);
-    const bikesStations = useSelector(state => state.bikes.stations);
+    const bikesNetworks = useSelector((state: Store) => state.bikes.networks);
+    const bikesStations = useSelector((state: Store) => state.bikes.stations);
 
     const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState<string | null>(null);
 
     //HTTP Requests Bikers networks
     async function fetchCityBikesNetworks(){
@@ -27,7 +28,7 @@ const Bikes = () => {
             const data = await response.json();
             dispatchActions(bikesActions.setCityBikesNetworks(data.networks));
         }
-        catch (error){
+        catch (error: any) {
             setError(error.message);
         }
         setIsLoading(false)
@@ -39,7 +40,7 @@ const Bikes = () => {
     //Pagination Networks
     const [currentPage, setCurrentPage] = useState(1);
     const networksPerPage = 6;
-    const paginateNetworks = (pageNumber) => {
+    const paginateNetworks = (pageNumber: number) => {
           setCurrentPage(pageNumber);
     }
     useEffect(() => {
@@ -70,7 +71,7 @@ const Bikes = () => {
     //Pagination Stations
     const [currentPageStations, setCurrentPageStations] = useState(1);
     const stationsPerPage = 5;
-    const paginateStations = (pageNumber) => {
+    const paginateStations = (pageNumber: number) => {
         setCurrentPageStations(pageNumber)
     }
 
