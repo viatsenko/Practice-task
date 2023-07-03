@@ -1,0 +1,32 @@
+<div *ngIf="(bikesStations$ | async) as stations" class="list-item">
+  <nz-list nzBordered nzSize="small" nzItemLayout="horizontal">
+    <nz-list-item>
+      <button nz-button  nzType="default" nzShape="round" (click)="handleClick()">
+        <span nz-icon nzType="arrow-left"></span>
+        Back to Networks
+      </button>
+      <h2 nz-typography class="header-stations">Stations bikes</h2>
+    </nz-list-item>
+    <nz-list-item>
+      <span class="header">Free bikes</span>
+      <span class="header">Name</span>
+      <span class="header">likes</span>
+    </nz-list-item>
+    <nz-list-item *ngFor="let item of stations |
+     paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }" class="list-item-pointer">
+        <span>{{item.free_bikes}}</span>
+        <span>{{item.name}}</span>
+      <div >
+        <div (click)="likesHandler(item.id, item.name)" class="likes-pointer">
+          <span *ngIf="(likesIds$ | async)?.includes(item.id); else notLiked" nz-icon nzType="heart" nzTheme="twotone" [nzTwotoneColor]="'red'"></span>
+          <ng-template #notLiked>
+          <span nz-icon nzType="heart" nzTheme="twotone" [nzTwotoneColor]="'#B8B8B8'"></span>
+          </ng-template>
+        </div>
+      </div>
+    </nz-list-item>
+    <nz-list-footer class="ngx-pagination">
+      <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+    </nz-list-footer>
+  </nz-list>
+</div>

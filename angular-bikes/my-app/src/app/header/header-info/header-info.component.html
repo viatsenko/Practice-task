@@ -1,0 +1,11 @@
+<nz-page-header *ngIf="(auth$ | async)">
+  <nz-page-header-subtitle>
+    <span *ngIf="(networkName$ | async); else networkAmount">Network name: {{networkName$ | async}}</span>
+      <span *ngIf="(networkName$ | async)">Stations amount: {{(stationLength$ | async)?.length}}</span>
+    <ng-template #networkAmount>
+      <span>Networks amount: {{(networksLength$ | async)?.length}}</span>
+    </ng-template>
+    <span>Likes amount: {{likesCount$ | async}}</span>
+  </nz-page-header-subtitle>
+</nz-page-header>
+

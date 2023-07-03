@@ -1,0 +1,23 @@
+<div class="container">
+  <form nz-form [formGroup]="form" (ngSubmit)="submitForm()" class="login-form">
+    <h1 class="main-text-pages">City Bikes</h1>
+
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input your Email">
+        <nz-input-group nzPrefixIcon="mail">
+          <input nz-input placeholder="Email" type="text" formControlName="email"/>
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input your Password. Length must be at least 3 characters">
+        <nz-input-group nzPrefixIcon="lock">
+          <input nz-input placeholder="Password" type="password" formControlName="password"/>
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+
+    <button nz-button class="login-form-button" nzType="primary" (click)="auth.login()">Login</button>
+  </form>
+</div>
