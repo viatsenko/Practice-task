@@ -1,0 +1,21 @@
+ <div *ngIf="(bikesNetworks$  |async) as networks" class="list-item">
+   <nz-list nzBordered nzSize="small" nzItemLayout="horizontal">
+     <nz-list-item><h2 nz-typography class="header-bikes">Networks bikes</h2></nz-list-item>
+     <nz-list-item>
+       <span class="header">Name</span>
+       <span class="header">Company</span>
+       <span class="header">City</span>
+     </nz-list-item>
+     <nz-list-item *ngFor="let e of networks |
+     paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }"
+                   (click)="handleClick(e.id)"
+                   class="list-item-pointer">
+       <span>{{e.name}}</span>
+       <span>{{e.company}}</span>
+       <span>{{e.location.city}}</span>
+     </nz-list-item>
+     <nz-list-footer class="ngx-pagination">
+        <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+     </nz-list-footer>
+   </nz-list>
+  </div>

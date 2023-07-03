@@ -1,0 +1,12 @@
+<ul nz-menu nzMode = 'horizontal' nzTheme="dark">
+  <nz-avatar nzIcon="user" style="background-color: #0b6adc" class="nz-avatar"></nz-avatar>
+  <li nz-menu-item nzMatchRouter="true">
+    <span nz-icon nzType="car" nzTheme="outline"></span>
+    <a nz-button nzType="link" [routerLink]="['/bikes']">Bicycle station</a>
+  </li>
+  <li nz-menu-item nzMatchRouter="true" nzMatchRouterExact >
+    <span nz-icon nzType="arrow-right" nzTheme="outline"></span>
+    <a nz-button nzType="link" [routerLink]="['/']" (click)="clearHeaderInfo()">Home page</a>
+  </li>
+</ul>
+
